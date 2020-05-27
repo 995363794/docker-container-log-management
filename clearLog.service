@@ -1,0 +1,13 @@
+[Unit]
+Description=clearLog
+Requires=rc-local.service
+After=rc-local.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /opt/easyfetch/clearLog.js
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
